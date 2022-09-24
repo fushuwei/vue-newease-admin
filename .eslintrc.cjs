@@ -8,8 +8,7 @@ module.exports = {
         "plugin:vue/vue3-essential",
         "plugin:@typescript-eslint/recommended"
     ],
-    "overrides": [
-    ],
+    "overrides": [],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -20,5 +19,12 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+        "@typescript-eslint/ban-types": ["error", {
+            "extendDefaults": true,
+            "types": {
+                "{}": false
+            }
+        }],
+        "@typescript-eslint/no-explicit-any": ["off"]
     }
 }
